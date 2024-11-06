@@ -1,4 +1,1 @@
-redirects: 
- #redirect for home from root
- - source: /home
- destination: /home
+# Hello
