@@ -16,7 +16,7 @@ body {
 }
 
 .diagnostic {
-    border: 1px solid red; /* Diagnostic border */
+    border: 0px solid red; /* Diagnostic border */
 }
 
 /* Header */
