@@ -6,29 +6,24 @@
 }
 
 body {
-    color: #333;
     background-color: #f9f9f9;
+    color: #333;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
-    padding: 1rem;
-}
-
-/* 404 Page Center Alignment */
-body.error-page {
-    align-items: center;
 }
 
 .container {
     max-width: 800px;
-    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-/* Header for Documentation Page */
+/* Header */
 header {
     background-color: #007acc;
     color: #fff;
-    padding: 2rem;
+    padding: 2rem 0;
     text-align: center;
     width: 100%;
 }
@@ -42,7 +37,7 @@ header p {
     font-size: 1.25rem;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
     background-color: #333;
     padding: 1rem;
@@ -69,8 +64,9 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Main Content for Documentation Page */
+/* Main Content */
 main {
+    flex: 1;
     padding: 2rem;
     max-width: 800px;
     width: 100%;
@@ -91,31 +87,7 @@ pre {
     padding: 1rem;
     border-left: 4px solid #007acc;
     overflow-x: auto;
-}
-
-/* Search Bar for 404 Page */
-.search-bar {
-    display: flex;
-    gap: 0.5rem;
-    margin: 2rem 0;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.search-bar button {
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    background-color: #007acc;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    font-family: monospace;
 }
 
 /* Footer */
@@ -128,28 +100,12 @@ footer {
     width: 100%;
 }
 
-/* Links for 404 Page and Documentation */
-.links a {
-    display: inline-block;
-    margin: 0 0.5rem;
-    font-size: 1rem;
+/* Link Styling */
+a {
     color: #007acc;
     text-decoration: none;
 }
 
-.links a:hover {
+a:hover {
     text-decoration: underline;
-}
-
-/* 404-Specific Styling */
-body.error-page .container h1 {
-    font-size: 6rem;
-    color: #007acc;
-    margin-bottom: 1rem;
-}
-
-body.error-page .container p {
-    font-size: 1.25rem;
-    color: #666;
-    margin-bottom: 2rem;
 }
