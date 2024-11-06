@@ -18,6 +18,8 @@
         <ul>
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#usage">Usage</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#actions">Actions</a></li>
             <li><a href="#examples">Examples</a></li>
         </ul>
     </nav>
@@ -29,13 +31,19 @@
         </section>
 
         <section id="usage">
+            <h2>Installation</h2>
+            <pre><code>npm install lwl-cli -g</code></pre>
+            <p>Install LWL globally to get started quickly. Alternatively, use the CLI from source for development.</p>
+        </section>
+
+        <section id="events">
             <h2>Usage</h2>
             <p>Get started with basic commands in LWL:</p>
             <pre><code>lwl run <your_file.lwl></code></pre>
             <p>Use this command to execute an LWL script.</p>
         </section>
 
-        <section id="examples">
+        <section id="actions">
             <h2>Examples</h2>
             <h3>Hello World</h3>
             <pre><code>print("Hello, World!")</code></pre>
@@ -43,6 +51,13 @@
             <pre><code>if (x > 10) {
     print("x is greater than 10");
 }</code></pre>
+        </section>
+
+        <section id="examples">
+            <h2>API Reference</h2>
+            <h3>print()</h3>
+            <p>Outputs text to the console. Usage:</p>
+            <pre><code>print("Your text here")</code></pre>
         </section>
     </main>
 
