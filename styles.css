@@ -10,9 +10,18 @@ body {
     background-color: #f9f9f9;
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
     padding: 1rem;
+}
+
+/* 404 Page Center Alignment */
+body.error-page {
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
 }
 
 /* Header for Documentation Page */
@@ -60,25 +69,19 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Main Content */
-.container {
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Section Styling for Documentation Page */
+/* Main Content for Documentation Page */
 main {
     padding: 2rem;
     max-width: 800px;
+    width: 100%;
     margin: 0 auto;
 }
 
-section {
+main section {
     margin-bottom: 2rem;
 }
 
-h2 {
+main h2 {
     color: #007acc;
     margin-bottom: 0.5rem;
 }
@@ -139,13 +142,13 @@ footer {
 }
 
 /* 404-Specific Styling */
-.container h1 {
+body.error-page .container h1 {
     font-size: 6rem;
     color: #007acc;
     margin-bottom: 1rem;
 }
 
-.container p {
+body.error-page .container p {
     font-size: 1.25rem;
     color: #666;
     margin-bottom: 2rem;
