@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>LWL Documentation</h1>
-            <p>Your guide to mastering LWL programming</p>
-        </div>
+    <header class="diagnostic">
+        <h1>LWL Documentation</h1>
+        <p>Your guide to mastering LWL programming</p>
     </header>
 
-    <nav>
+    <nav class="diagnostic">
         <ul>
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#usage">Usage</a></li>
@@ -24,44 +22,30 @@
         </ul>
     </nav>
 
-    <main>
+    <main class="diagnostic">
         <section id="introduction">
             <h2>Introduction</h2>
-            <p>Welcome to LWL, a powerful new coding language designed for [specific use case or audience]. LWL is built to be intuitive, flexible, and efficient for both beginners and advanced users alike.</p>
+            <p>Welcome to LWL, a powerful new coding language designed for [specific use case or audience].</p>
         </section>
 
         <section id="usage">
             <h2>Installation</h2>
             <pre><code>npm install lwl-cli -g</code></pre>
-            <p>Install LWL globally to get started quickly. Alternatively, use the CLI from source for development.</p>
         </section>
 
         <section id="events">
             <h2>Usage</h2>
-            <p>Get started with basic commands in LWL:</p>
+            <p>Basic LWL command:</p>
             <pre><code>lwl run <your_file.lwl></code></pre>
-            <p>Use this command to execute an LWL script.</p>
         </section>
 
         <section id="actions">
             <h2>Examples</h2>
-            <h3>Hello World</h3>
             <pre><code>print("Hello, World!")</code></pre>
-            <h3>Conditional Statements</h3>
-            <pre><code>if (x > 10) {
-    print("x is greater than 10");
-}</code></pre>
-        </section>
-
-        <section id="examples">
-            <h2>API Reference</h2>
-            <h3>print()</h3>
-            <p>Outputs text to the console. Usage:</p>
-            <pre><code>print("Your text here")</code></pre>
         </section>
     </main>
 
-    <footer>
+    <footer class="diagnostic">
         <p>&copy; 2024 LWL Project. All rights reserved.</p>
     </footer>
 </body>
