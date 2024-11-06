@@ -1,17 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta http-equiv="refresh" content="0; url=" />
-  <script type="text/javascript">
-    window.location.href = "https://lambweb.github.io/home"
-  </script>
-  <title>Redirecting...</title>
-</head>
-
-<body>
-  Redirecting to . If it doesn't load, click <a
-    href="https://lambweb.github.io/home" />here</a>.
-</body>
-
-</html>
+window.location.replace("https://lambweb.github.io/home");
