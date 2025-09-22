@@ -1,1 +1,22 @@
-# Hello
+include: [".well-known"]
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-include-cache
+  - jekyll-redirect-from
+  - jekyll-mentions
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+  - jekyll-emoji
+  - jekyll-gist
+  - jekyll-remote-theme
+  - jekyll-lunr-js-search
+  - jekyll-compose
+  - jekyll-sass-converter
+  - jekyll-assets
+  - jekyll-typogrify
+  - jekyll-archives
+  - jekyll-multiple-languages-plugin
+  - jekyll-admin

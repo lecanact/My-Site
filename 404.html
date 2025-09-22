@@ -18,10 +18,10 @@
             var searchTerm = document.getElementById('searchInput').value;
             if (searchTerm) {
                 //Redirect to the search page with the query
-                window.location.href = '/?=' + encodeURIComponent(searchTerm);
+                window.location.href = 'https://lecanact.spook.bio/search?q=' + encodeURIComponent(searchTerm);
 
                 // Or, perform a Google search
-                // window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(searchTerm);
+                // window.location.href = 'https://google.com/search?q=' + encodeURIComponent(searchTerm);
             } else {
                 alert('Text Is Invalid.');
             }
