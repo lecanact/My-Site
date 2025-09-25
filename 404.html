@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link rel="stylesheet" href="404.css">
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! The page you're looking for doesn't exist.</p>
+        <div class="search-bar">
+                <input type="text" id="SearchInput" placeholder="Search...">
+    <button id="SearchButton">Search</button>
+                <script>
+        document.getElementById('SearchButton').onclick = function() {
+            var searchTerm = document.getElementById('searchInput').value;
+            if (searchTerm) {
+                //Redirect to the search page with the query
+                window.location.href = 'https://lecanact.spook.bio/search?q=' + encodeURIComponent(searchTerm);
+
+                // Or, perform a Google search
+                // window.location.href = 'https://google.com/search?q=' + encodeURIComponent(searchTerm);
+            } else {
+                alert('Text Is Invalid.');
+            }
+        };
+    </script>
+        </div>
+        <div class="links">
+            <a href="/">Return Home</a>
+            <a href="/search">Browse Around</a>
+        </div>
+    </div>
+</body>
+</html>
