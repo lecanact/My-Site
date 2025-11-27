@@ -1,6 +1,7 @@
 // Main Search Handler (Might make another one to improve this one.)
 
 document.getElementById('searchForm').dispatchEvent(new Event('submit'));
+document.getElementById('year').innerHTML = `&copy; ${new Date().getFullYear()} lecanact`;
 
 const API_KEY = "AIzaSyCjhpJ88VvxrkE_DATG0ed51c5gCqp_PSs";
 const cx = "621a38269031b4e89";
@@ -39,14 +40,22 @@ if (queryParam) {
                             <p class="result_description">${item.snippet}</p>
                             <a class="result_link" href="${item.link}" target="_blank"> ${item.displayLink}</a>
                         `;
-                resultsContainer.appendChild(resultDiv);
-            });
+                try {
+                    resultsContainer.appendChild(resultDiv);
+                } catch (e) {
+                    console.error("Error appending search result:", e);
+                });
         } else {
             const noResultDiv = document.createElement('div');
             noResultDiv.classList.add('no_result');
             noResultDiv.style.display = 'block';
             noResultDiv.innerHTML = `<p>No results found.</p>`;
-            resultsContainer.appendChild(noResultDiv);
+
+            try {
+                resultsContainer.appendChild(noResultDiv);
+            } catch (e) {
+                console.error("Error appending no result message:", e);
+            };
         }
     });
     document.title = `Search results for "${queryParam}" - lecanact search`;
