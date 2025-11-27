@@ -30,7 +30,7 @@
             event.preventDefault();
             const query = document.getElementById('searchInput').value;
             document.title = `Search results for "${query}" - lecanact`;
-            fetch(`/search?q=${encodeURIComponent(query)}`)
+            fetch(`https://www.googleapis.com/customsearch/v1?&cx=621a38269031b4e89&alt=json&key=AIzaSyCjhpJ88VvxrkE_DATG0ed51c5gCqp_PSs&q=${encodeURIComponent(query)}`)
                 .then(response => response.json())
                 .then(data => {
                     const resultsDiv = document.getElementById('results');
