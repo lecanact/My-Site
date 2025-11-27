@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Page</title>
+    <title>Test Search Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
             event.preventDefault();
             const query = document.getElementById('searchInput').value;
             document.title = `Search results for "${query}" - lecanact`;
-            fetch(`https://lecanact.spook.bio/search?q=${encodeURIComponent(query)}`)
+            fetch(`/search?q=${encodeURIComponent(query)}`)
                 .then(response => response.json())
                 .then(data => {
                     const resultsDiv = document.getElementById('results');
