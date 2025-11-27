@@ -35,10 +35,10 @@
                 .then(data => {
                     const resultsDiv = document.getElementById('results');
                     resultsDiv.innerHTML = '';
-                    if (data.results && data.results.length > 0) {
-                        data.results.forEach(item => {
+                    if (data.items && data.items.length > 0) {
+                        data.items.forEach(item => {
                             const div = document.createElement('div');
-                            div.textContent = item.name; // Adjust based on actual data structure
+                            div.innerHTML = item.htmlTitle; // Adjust based on actual data structure
                             resultsDiv.appendChild(div);
                         });
                     } else {
