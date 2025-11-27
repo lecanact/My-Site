@@ -1,5 +1,13 @@
-const API_KEY = "AIzaSyCjhpJ88VvxrkE_DATG0ed51c5gCqp_PSs"
-const cx = "621a38269031b4e89"
+// Main Search Handler (Might make another one to improve this one.)
+
+document.getElementById('searchForm').dispatchEvent(new Event('submit'));
+
+const API_KEY = "AIzaSyCjhpJ88VvxrkE_DATG0ed51c5gCqp_PSs";
+const cx = "621a38269031b4e89";
+const urlParams = new URLSearchParams(window.location.search);
+const queryParam = urlParams.get('q');
+
+let currenturl = window.location.href;
 
 async function search(query) {
     let results = [];
@@ -16,27 +24,34 @@ async function search(query) {
     return results;
 }
 
-let currenturl = window.location.href;
-const urlParams = new URLSearchParams(window.location.search);
-const queryParam = urlParams.get('q');
 if (queryParam) {
     document.getElementById('searchInput').value = queryParam;
     search(queryParam).then(results => {
-        const resultsDiv = document.getElementById('results');
-        resultsDiv.innerHTML = '';
+        const resultsContainer = document.getElementById('results');
+        resultsContainer.innerHTML = '';
         if (results.length > 0) {
             results.forEach(item => {
-                const div = document.createElement('div');
-                div.innerHTML = item.htmlTitle;
-                resultsDiv.appendChild(div);
+                const resultDiv = document.createElement('div');
+                resultDiv.classList.add('search_result');
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = `
+                            <p class="result_title">${item.title}</p>
+                            <p class="result_description">${item.snippet}</p>
+                            <a class="result_link" href="${item.link}" target="_blank"> ${item.displayLink}</a>
+                        `;
+                resultsContainer.appendChild(resultDiv);
             });
         } else {
-            resultsDiv.textContent = 'No results found.';
+            const noResultDiv = document.createElement('div');
+            noResultDiv.classList.add('no_result');
+            noResultDiv.style.display = 'block';
+            noResultDiv.innerHTML = `<p>No results found.</p>`;
+            resultsContainer.appendChild(noResultDiv);
         }
     });
     document.title = `Search results for "${queryParam}" - lecanact search`;
-    document.getElementById('searchForm').dispatchEvent(new Event('submit'));
 }
+
 document.getElementById('searchForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const query = document.getElementById('searchInput').value;

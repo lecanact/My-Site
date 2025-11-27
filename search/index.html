@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Search Page</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
     <header>
         <h1>Simple Search Engine</h1>
     </header>
+
+
     <main>
         <form id="searchForm">
             <input type="text" id="searchInput" placeholder="Search..." required>
             <button type="submit">Search</button>
         </form>
-        <div id="results"></div>
+
+        <div class="results">
+            <div class="search_result" style="display: none;">
+                <p class="result_title"></p>
+                <p class="result_description"></p>
+                <a class="result_link" href="" target="_blank">Read more</a>
+            </div>
+
+            <div class="no_result" style="display: none;">
+                <p>No results found.</p>
+            </div>
+        </div>
     </main>
+
+    <footer>
+        <p>&copy;</p>
+        <p id="year"></p>
+        <p> lecanact</p>
+    </footer>
+
     <script src="search.js" defer></script>
+
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
