@@ -37,9 +37,9 @@ if (queryParam) {
                 resultDiv.style.display = 'block';
                 item.displayLink = item.displayLink.replace("www.", "")
                 resultDiv.innerHTML = `
-                            <a class="result_title" href="${item.link}" target="${item.link}">${item.title}</a>
+                            <a class="result_title" href="${item.link}" target="${item.link}" rel="noopener noreferrer">${item.title}</a>
                             <p class="result_description">${item.snippet}</p>
-                            <a class="result_link" href="${item.link}" target="_blank"> ${item.displayLink}</a>
+                            <a class="result_link" href="${item.link}" target="_blank" rel="noopener noreferrer"> ${item.displayLink}</a>
                         `;
                 try {
                     resultsContainer.appendChild(resultDiv);
