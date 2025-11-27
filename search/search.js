@@ -35,8 +35,9 @@ if (queryParam) {
                 const resultDiv = document.createElement('div');
                 resultDiv.classList.add('search_result');
                 resultDiv.style.display = 'block';
+                item.displayLink = item.displayLink.replace("www.", "")
                 resultDiv.innerHTML = `
-                            <p class="result_title">${item.title}</p>
+                            <a class="result_title" href="${item.link}" target="${item.link}">${item.title}</a>
                             <p class="result_description">${item.snippet}</p>
                             <a class="result_link" href="${item.link}" target="_blank"> ${item.displayLink}</a>
                         `;
@@ -44,7 +45,8 @@ if (queryParam) {
                     resultsContainer.appendChild(resultDiv);
                 } catch (e) {
                     console.error("Error appending search result:", e);
-                });
+                };
+            });
         } else {
             const noResultDiv = document.createElement('div');
             noResultDiv.classList.add('no_result');
