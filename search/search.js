@@ -27,7 +27,7 @@ async function search(query) {
 if (queryParam) {
     document.getElementById('searchInput').value = queryParam;
     search(queryParam).then(results => {
-        const resultsContainer = document.getElementsByClassName('results');
+        const resultsContainer = document.getElementById('results');
         resultsContainer.innerHTML = '';
         if (results.length > 0) {
             results.forEach(item => {
